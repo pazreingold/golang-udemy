@@ -37,8 +37,7 @@ func main() {
 		zipCode: 94000,
 	}
 
-	pazPointer := &paz
-	pazPointer.updateName("Raz")
+	paz.updateName("Raz")
 	paz.print()
 }
 
