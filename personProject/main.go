@@ -37,12 +37,13 @@ func main() {
 		zipCode: 94000,
 	}
 
-	paz.updateName("Raz")
+	pazPointer := &paz
+	pazPointer.updateName("Raz")
 	paz.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 func (p person) print() {
 	fmt.Printf("%+v", p)
