@@ -37,6 +37,14 @@ func main() {
 		zipCode: 94000,
 	}
 
-	fmt.Print(paz)
-	fmt.Printf("%+v", paz)
+	paz.updateName("Raz")
+	paz.print()
+}
+
+func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
+}
+func (p person) print() {
+	fmt.Printf("%+v", p)
+
 }
